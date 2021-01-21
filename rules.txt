@@ -1,0 +1,15 @@
+init:{start}
+X{start}->X{start}R
+0{start}->X{B}R
+1{start}->X{C}R
+_{start}->_{halt}R
+0{B}->0{B}R
+X{B}->X{B}R
+1{B}->X{D}L
+1{D}->1{D}L
+0{D}->0{D}L
+X{D}->X{D}L
+_{D}->_{start}R
+0{C}->X{D}L
+X{C}->X{C}R
+1{C}->1{C}R
