@@ -33,7 +33,8 @@ X{D}->X{D}L
 _{D}->_{start}R
 0{C}->X{D}L
 X{C}->X{C}R
-1{C}->1{C}R```
+1{C}->1{C}R
+```
 __Input tape__:
 `0011`
 __Output tape__:
