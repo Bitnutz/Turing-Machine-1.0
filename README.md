@@ -41,5 +41,5 @@ __Input tape__:
 `\
 __Output tape__:
 `_ _ _ _ _ _ X X X X _ _ _ _ _ 
-`\
+`
 
