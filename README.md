@@ -38,8 +38,8 @@ X{C}->X{C}R
 __Input tape__:
 `
 0011
-`__
+`\
 __Output tape__:
 `_ _ _ _ _ _ X X X X _ _ _ _ _ 
-`__
+`\
 
