@@ -11,7 +11,7 @@
 ![Instruction Graph sample](https://github.com/Bitnutz/Turing-Machine-1.0/blob/main/sampleGraph.png)
 
 # 3. Tape
-## The tape class represents the tape of the machine. Two stacks are used, the left hadn-side is storing the symbols on the left of the tape,while the right hand-side is storing the the head and the symbols to the right.
+## The tape class represents the tape of the machine. Two stacks are used, the left hand-side is storing the symbols on the left of the tape,while the right hand-side is storing the head and the symbols to the right.
 
 # 4. Machine
 ## This class is the main engine of the project, using all of the above classes.
