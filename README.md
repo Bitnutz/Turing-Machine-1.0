@@ -16,7 +16,7 @@
 # 4. Machine
 ## This class is the main engine of the project, using all of the above classes.
 
-# Sample program for maiking all 0s and 1s Xs. (The sample is the same as the image above)
+# Sample program for transforming all 0s and 1s into Xs. (The sample is the same as the image above)
 
 __Instructions__:
 ```init:{start}
