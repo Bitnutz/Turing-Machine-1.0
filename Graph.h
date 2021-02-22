@@ -27,7 +27,6 @@ private:
 	int get_halting_state_index();
 public:
 	Graph(InstructionTokenizer&); 
-	~Graph();
 
 	void combine_with(Graph& other);
 

@@ -23,10 +23,6 @@ void Machine::compute()
 		{
 			if (inst.get_read_symbol() == tape_head)
 			{
-
-				/*std::cout << "current instruction: " << inst.get_read_symbol() << " " << inst.get_from_state() << " -> "
-					<< inst.get_write_symbol() << " " << inst.get_to_state() << " " << inst.get_direction() << "\n";*/
-
 				cur_state_edges = rules.go_to_state(current_state, inst.get_read_symbol());
 
 				std::cout << tape.get_tape() << "\n";
@@ -51,7 +47,11 @@ void Machine::compute()
 		else if (direction == 'L')
 			tape.move_head_left(tape_head);
 		else
+		{
+			tape_head = tape.get_head_symbol();
 			continue;
+		}
+
 		tape_head = tape.get_head_symbol();
 	}
 	output_file << result;
@@ -66,5 +66,7 @@ std::string Machine::get_current_tape()
 void Machine::combine_with(Graph& other_rules)
 {
 	rules.combine_with(other_rules);
+	rules.test_graph_initialization();
+	std::cout << "New halting state: " << rules.get_halting_state() << "\n";
 }
 

@@ -19,5 +19,5 @@ public:
 	std::string get_current_tape();
 
 	// Same as combine_with() in graph
-	void combine_with(Graph&); // not tested
+	void combine_with(Graph&); // not working properly.
 };

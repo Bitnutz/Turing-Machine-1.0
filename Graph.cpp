@@ -82,6 +82,7 @@ Graph::Graph(InstructionTokenizer& tokenized_instructions)
 		}
 	}
 
+	// currently the combination doesn't work, because after combining the graphs, the indices get mixed.
 	int halting_state_index = get_halting_state_index();
 	std::list<Cell>::iterator it = states_table.begin();
 	int i = 0;
@@ -90,10 +91,6 @@ Graph::Graph(InstructionTokenizer& tokenized_instructions)
 		if (halting_state_index == i)
 			halting_state = it->state;
 	}
-}
-
-Graph::~Graph()
-{
 }
 
 // This function:
@@ -119,6 +116,15 @@ void Graph::combine_with(Graph& other) //todo: revision this.
 			break;
 		}
 		index_to_delete++;
+	}
+	// finding the new halt state
+	int halting_state_index = index_to_delete;
+	std::list<Cell>::iterator it = states_table.begin();
+	int i = 0;
+	for (it, i; it != states_table.end(); ++it, ++i)
+	{
+		if (halting_state_index == i)
+			halting_state = it->state;
 	}
 }
 
@@ -189,11 +195,14 @@ void Graph::test_graph_initialization()
 
 	std::cout << "TEST adj_list#####################\n";
 	std::vector<std::vector<Instruction>>::iterator it = adj_list.begin();
+	int states_counter = 0;
 	for (it; it != adj_list.end(); ++it)
 	{
+		std::cout << states_counter << "\n";
 		for (Instruction inst : *it)
 		{
 			std::cout << "\t" << inst.get_read_symbol() << "{" << inst.get_from_state() << "} -> " << inst.get_write_symbol() << "{" << inst.get_to_state() << "}" << inst.get_direction() << "\n";
 		}
+		states_counter++;
 	}
 }
