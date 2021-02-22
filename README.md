@@ -1,23 +1,23 @@
-#Turing Machine Project
->A non-deterministic of a Turing Machine using a set of rules and an input, passed by the user.
+# Turing Machine Project
+## A non-deterministic of a Turing Machine using a set of rules and an input, passed by the user.
 
 **Structure and classes**
 
 1. Tokenizer
-> The tokenizer is responisble for parsing the given input(rules and input tape) into tokens and distribute them into structures respectively.
+## The tokenizer is responisble for parsing the given input(rules and input tape) into tokens and distribute them into structures respectively.
 
 2. Graph
-> The graph class represents the rules linked between each other with their respective edges. An example for such a graph is the following: 
+## The graph class represents the rules linked between each other with their respective edges. An example for such a graph is the following: 
 ![Instruction Graph sample](https://github.com/Bitnutz/Turing-Machine-1.0/blob/main/sampleGraph.png)
 
 3. Tape
-> The tape class represents the tape of the machine. Two stacks are used, the left hadn-side is storing the symbols on the left of the tape,
+## The tape class represents the tape of the machine. Two stacks are used, the left hadn-side is storing the symbols on the left of the tape,
 while the right hand-side is storing the the head and the symbols to the right.
 
 4. Machine
-> This class is the main engine of the project, using all of the above classes.
+## This class is the main engine of the project, using all of the above classes.
 
-#Sample program for maiking all 0s and 1s Xs. (The sample is the same as the image above)
+# Sample program for maiking all 0s and 1s Xs. (The sample is the same as the image above)
 
 __Instructions__:
 `init:{start}
